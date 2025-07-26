@@ -1,0 +1,25 @@
+Penjelasan Kode Program Kalkulator Sederhana (PHP):
+
+1. HTML Form:
+   - Form ini meminta dua input angka dari pengguna dan satu pilihan operator (tambah, kurang, kali, bagi).
+   - Metode pengiriman form adalah POST.
+
+2. Pemrosesan PHP:
+   - Mengecek apakah tombol "hitung" ditekan menggunakan: if (isset($_POST['hitung']))
+   - Mengambil data dari form menggunakan $_POST dan menyimpannya ke dalam variabel:
+       $angka1: angka pertama yang dimasukkan
+       $angka2: angka kedua yang dimasukkan
+       $operator: pilihan operasi yang dipilih pengguna
+   - Variabel $hasil digunakan untuk menyimpan hasil dari perhitungan.
+
+3. Logika If-Else:
+   - Mengecek nilai dari $operator dan melakukan operasi matematika sesuai pilihannya:
+     - Jika operator "tambah", maka $hasil = $angka1 + $angka2
+     - Jika operator "kurang", maka $hasil = $angka1 - $angka2
+     - Jika operator "kali", maka $hasil = $angka1 * $angka2
+     - Jika operator "bagi", maka dicek dulu apakah $angka2 tidak sama dengan nol.
+       Jika tidak nol, maka $hasil = $angka1 / $angka2
+       Jika nol, maka $hasil berisi pesan kesalahan: "Tidak bisa dibagi dengan nol!"
+
+4. Menampilkan Hasil:
+   - Hasil dari perhitungan ditampilkan di dalam tag HTML <h3>.
